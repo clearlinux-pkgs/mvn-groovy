@@ -4,14 +4,14 @@
 #
 Name     : mvn-groovy
 Version  : 2.4.12
-Release  : 2
+Release  : 3
 URL      : https://github.com/apache/groovy/archive/GROOVY_2_4_12.tar.gz
 Source0  : https://github.com/apache/groovy/archive/GROOVY_2_4_12.tar.gz
 Source1  : https://repo.gradle.org/gradle/libs-releases/org/codehaus/groovy/groovy-all/2.4.12/groovy-all-2.4.12.jar
 Source2  : https://repo.gradle.org/gradle/libs-releases/org/codehaus/groovy/groovy-all/2.4.12/groovy-all-2.4.12.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : ANTLR-PD Apache-2.0 BSD-3-Clause BSD-3-Clause-Clear EPL-1.0 MIT Public-Domain
+License  : ANTLR-PD Apache-2.0 BSD-3-Clause BSD-3-Clause-Clear CC-BY-2.5 EPL-1.0 MIT Public-Domain
 Requires: mvn-groovy-data = %{version}-%{release}
 Requires: mvn-groovy-license = %{version}-%{release}
 BuildRequires : apache-ant
@@ -51,12 +51,15 @@ license components for the mvn-groovy package.
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/mvn-groovy
+cp LICENSE %{buildroot}/usr/share/package-licenses/mvn-groovy/LICENSE
+cp NOTICE %{buildroot}/usr/share/package-licenses/mvn-groovy/NOTICE
 cp benchmark/bench/LICENSE %{buildroot}/usr/share/package-licenses/mvn-groovy/benchmark_bench_LICENSE
 cp licenses/LICENSE-ALLJARJAR %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_LICENSE-ALLJARJAR
 cp licenses/LICENSE-BASE %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_LICENSE-BASE
 cp licenses/LICENSE-BINZIP %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_LICENSE-BINZIP
 cp licenses/LICENSE-DOC %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_LICENSE-DOC
 cp licenses/LICENSE-JARJAR %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_LICENSE-JARJAR
+cp licenses/LICENSE-SDK %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_LICENSE-SDK
 cp licenses/antlr2-license.txt %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_antlr2-license.txt
 cp licenses/asciidoc-style-license.txt %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_asciidoc-style-license.txt
 cp licenses/asm-license.txt %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_asm-license.txt
@@ -69,6 +72,9 @@ cp licenses/junit-license.txt %{buildroot}/usr/share/package-licenses/mvn-groovy
 cp licenses/normalize-stylesheet-license.txt %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_normalize-stylesheet-license.txt
 cp licenses/xstream-license.txt %{buildroot}/usr/share/package-licenses/mvn-groovy/licenses_xstream-license.txt
 cp src/spec/doc/license.adoc %{buildroot}/usr/share/package-licenses/mvn-groovy/src_spec_doc_license.adoc
+cp subprojects/groovy-console/NOTICE %{buildroot}/usr/share/package-licenses/mvn-groovy/subprojects_groovy-console_NOTICE
+cp subprojects/groovy-docgenerator/LICENSE %{buildroot}/usr/share/package-licenses/mvn-groovy/subprojects_groovy-docgenerator_LICENSE
+cp subprojects/groovy-groovydoc/LICENSE %{buildroot}/usr/share/package-licenses/mvn-groovy/subprojects_groovy-groovydoc_LICENSE
 cp subprojects/groovy-groovysh/LICENSE %{buildroot}/usr/share/package-licenses/mvn-groovy/subprojects_groovy-groovysh_LICENSE
 cp subprojects/groovy-jsr223/LICENSE %{buildroot}/usr/share/package-licenses/mvn-groovy/subprojects_groovy-jsr223_LICENSE
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.12
@@ -88,12 +94,15 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/gro
 
 %files license
 %defattr(0644,root,root,0755)
+/usr/share/package-licenses/mvn-groovy/LICENSE
+/usr/share/package-licenses/mvn-groovy/NOTICE
 /usr/share/package-licenses/mvn-groovy/benchmark_bench_LICENSE
 /usr/share/package-licenses/mvn-groovy/licenses_LICENSE-ALLJARJAR
 /usr/share/package-licenses/mvn-groovy/licenses_LICENSE-BASE
 /usr/share/package-licenses/mvn-groovy/licenses_LICENSE-BINZIP
 /usr/share/package-licenses/mvn-groovy/licenses_LICENSE-DOC
 /usr/share/package-licenses/mvn-groovy/licenses_LICENSE-JARJAR
+/usr/share/package-licenses/mvn-groovy/licenses_LICENSE-SDK
 /usr/share/package-licenses/mvn-groovy/licenses_antlr2-license.txt
 /usr/share/package-licenses/mvn-groovy/licenses_asciidoc-style-license.txt
 /usr/share/package-licenses/mvn-groovy/licenses_asm-license.txt
@@ -106,5 +115,8 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/gro
 /usr/share/package-licenses/mvn-groovy/licenses_normalize-stylesheet-license.txt
 /usr/share/package-licenses/mvn-groovy/licenses_xstream-license.txt
 /usr/share/package-licenses/mvn-groovy/src_spec_doc_license.adoc
+/usr/share/package-licenses/mvn-groovy/subprojects_groovy-console_NOTICE
+/usr/share/package-licenses/mvn-groovy/subprojects_groovy-docgenerator_LICENSE
+/usr/share/package-licenses/mvn-groovy/subprojects_groovy-groovydoc_LICENSE
 /usr/share/package-licenses/mvn-groovy/subprojects_groovy-groovysh_LICENSE
 /usr/share/package-licenses/mvn-groovy/subprojects_groovy-jsr223_LICENSE
