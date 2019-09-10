@@ -4,7 +4,7 @@
 #
 Name     : mvn-groovy
 Version  : 2.4.12
-Release  : 3
+Release  : 4
 URL      : https://github.com/apache/groovy/archive/GROOVY_2_4_12.tar.gz
 Source0  : https://github.com/apache/groovy/archive/GROOVY_2_4_12.tar.gz
 Source1  : https://repo.gradle.org/gradle/libs-releases/org/codehaus/groovy/groovy-all/2.4.12/groovy-all-2.4.12.jar
