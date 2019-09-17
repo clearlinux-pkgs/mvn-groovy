@@ -4,16 +4,19 @@
 #
 Name     : mvn-groovy
 Version  : 2.4.12
-Release  : 6
+Release  : 7
 URL      : https://github.com/apache/groovy/archive/GROOVY_2_4_12.tar.gz
 Source0  : https://github.com/apache/groovy/archive/GROOVY_2_4_12.tar.gz
 Source1  : https://repo.gradle.org/gradle/libs-releases/org/codehaus/groovy/groovy-all/2.4.12/groovy-all-2.4.12.jar
 Source2  : https://repo.gradle.org/gradle/libs-releases/org/codehaus/groovy/groovy-all/2.4.12/groovy-all-2.4.12.pom
-Source3  : https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.jar
-Source4  : https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.pom
-Source5  : https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.1.5/groovy-all-2.1.5.pom
-Source6  : https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.jar
-Source7  : https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.pom
+Source3  : https://repo.gradle.org/gradle/libs-releases/org/codehaus/groovy/groovy-all/2.5.4/groovy-all-2.5.4.pom
+Source4  : https://repo.gradle.org/gradle/libs-releases/org/codehaus/groovy/groovy/2.5.4/groovy-2.5.4.jar
+Source5  : https://repo.gradle.org/gradle/libs-releases/org/codehaus/groovy/groovy/2.5.4/groovy-2.5.4.pom
+Source6  : https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.jar
+Source7  : https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.pom
+Source8  : https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.1.5/groovy-all-2.1.5.pom
+Source9  : https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.jar
+Source10  : https://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : ANTLR-PD Apache-2.0 BSD-3-Clause BSD-3-Clause-Clear CC-BY-2.5 EPL-1.0 MIT Public-Domain
@@ -88,20 +91,29 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/gro
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.12
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.12/groovy-all-2.4.12.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/1.8.3
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.5.4
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.5.4/groovy-all-2.5.4.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/2.5.4
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/2.5.4/groovy-2.5.4.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/2.5.4
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/2.5.4/groovy-2.5.4.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/1.8.3
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.pom
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/1.8.3
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.1.5
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.1.5/groovy-all-2.1.5.pom
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.1.5/groovy-all-2.1.5.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.8
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.jar
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.8
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.pom
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.pom
 
 
 %files
@@ -114,8 +126,11 @@ cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/groovy/gro
 /usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.12/groovy-all-2.4.12.pom
 /usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.jar
 /usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.4.8/groovy-all-2.4.8.pom
+/usr/share/java/.m2/repository/org/codehaus/groovy/groovy-all/2.5.4/groovy-all-2.5.4.pom
 /usr/share/java/.m2/repository/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.jar
 /usr/share/java/.m2/repository/org/codehaus/groovy/groovy/1.8.3/groovy-1.8.3.pom
+/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/2.5.4/groovy-2.5.4.jar
+/usr/share/java/.m2/repository/org/codehaus/groovy/groovy/2.5.4/groovy-2.5.4.pom
 
 %files license
 %defattr(0644,root,root,0755)
